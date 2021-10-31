@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <servlet>
+        <servlet-name>UserAddServlet</servlet-name>
+        <servlet-class>com.exam.controller.UserAddServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserAddServlet</servlet-name>
+        <url-pattern>/useradd</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UserFindServlet</servlet-name>
+        <servlet-class>com.exam.controller.UserFindServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserFindServlet</servlet-name>
+        <url-pattern>/userfind</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UserDeleteServlet</servlet-name>
+        <servlet-class>com.exam.controller.UserDeleteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserDeleteServlet</servlet-name>
+        <url-pattern>/userdelete</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UserSexServlet</servlet-name>
+        <servlet-class>com.exam.controller.UserSexServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UserSexServlet</servlet-name>
+        <url-pattern>/usersex</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.exam.controller.LoginServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/userlogin</url-pattern>
+    </servlet-mapping>
+
+    <!--设置默认主页-->
+    <welcome-file-list>
+        <welcome-file>login.html</welcome-file>
+    </welcome-file-list>
+</web-app>

@@ -1,0 +1,24 @@
+ 在线考试管理系统---用户星系管理模块
+
+功能:
+        用户信息注册
+        用户信息查询
+        用户信息删除
+        用户信息更新
+
+准备:
+    1.创建用户信息表 Users.frm
+        userId int  pk  auto_increment
+        userName varchar(50)
+        password varchar(50)
+        sex char(1)
+        email   varchar(50)
+
+    auto_increment 自增序列
+    pk 主键约束
+
+    2.在src下 com.exam.entity.Users 实体类
+
+    3.在src下面 com.exam.util.JdbcUtil  工具类
+
+    4.在Web下WEB-INF下创建Lib文件夹 存放mysql提供JDBC实现jar包
