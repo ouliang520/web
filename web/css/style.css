@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	margin: 0;
+	padding: 0;
+	background-image: url(/img/3.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+
+}
+#maxbox{
+	margin: 0 auto;
+	margin-top: 100px;
+	padding:30px;
+	background-color:rgba(175,187,179,0.70);
+
+	width: 600px;
+	height: 300px;
+	text-align: center;
+}
+#maxbox h1{
+	padding: 0;
+	padding-top: 60px;
+	color: white;
+	font-size: 30px;
+
+}
