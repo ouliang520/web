@@ -7,6 +7,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Date;
 
 public class UserAddServlet extends HttpServlet {
     @Override
@@ -26,7 +27,11 @@ public class UserAddServlet extends HttpServlet {
         //[调用UserDao]将用户信息填充到INSSERT命令并接着JDBC规范发送到数据库服务器
         user = new Users(null,userName,password,sex,email);
         if(user != null) {
+
+            Date starDate =new Date();
             result = dao.add(user);
+            Date endDate =new Date();
+            System.out.println("添加消耗时间"+(endDate.getTime()-starDate.getTime()));
             //[调用响应对象]将[处理结构]以二进制形式写入到响应体
             response.setContentType("text/html;charset=utf-8");
             out = response.getWriter();
