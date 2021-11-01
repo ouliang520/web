@@ -54,4 +54,7 @@
     <welcome-file-list>
         <welcome-file>login.html</welcome-file>
     </welcome-file-list>
+    <listener>
+        <listener-class>com.exam.listener.OneListener</listener-class>
+    </listener>
 </web-app>

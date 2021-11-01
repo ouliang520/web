@@ -2,6 +2,8 @@ package com.exam.dao;
 
 import com.exam.util.JdbcUtil;
 import com.exam.entity.Users;
+
+import javax.servlet.http.HttpServletRequest;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -27,6 +29,24 @@ public class UserDao {
             throwables.printStackTrace();
         } finally {
             util.close();
+        }
+        return result;
+    }
+    //add重载
+    public int add(Users user, HttpServletRequest request) {
+        String sql = "insert into users(userName,password,sex,email)" + "values(?,?,?,?)";
+        PreparedStatement ps = util.createStatement(sql,request);
+        int result = 0;
+        try {
+            ps.setString(1, user.getUserName());
+            ps.setString(2, user.getPassword());
+            ps.setString(3, user.getSex());
+            ps.setString(4, user.getEmail());
+            result = ps.executeUpdate();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        } finally {
+            util.close(request);
         }
         return result;
     }

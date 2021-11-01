@@ -28,10 +28,18 @@ public class UserAddServlet extends HttpServlet {
         user = new Users(null,userName,password,sex,email);
         if(user != null) {
 
+//            Date starDate =new Date();
+//            result = dao.add(user);
+//            Date endDate =new Date();
+//            System.out.println("添加消耗时间"+(endDate.getTime()-starDate.getTime()));
+//
+////            上述代码调试生成时间(用时34秒)
+
             Date starDate =new Date();
-            result = dao.add(user);
+            result = dao.add(user,request);
             Date endDate =new Date();
             System.out.println("添加消耗时间"+(endDate.getTime()-starDate.getTime()));
+            //用时
             //[调用响应对象]将[处理结构]以二进制形式写入到响应体
             response.setContentType("text/html;charset=utf-8");
             out = response.getWriter();
