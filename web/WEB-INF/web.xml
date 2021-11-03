@@ -50,11 +50,22 @@
         <url-pattern>/userlogin</url-pattern>
     </servlet-mapping>
 
-    <!--设置默认主页-->
+<!--    设置默认主页-->
     <welcome-file-list>
         <welcome-file>login.html</welcome-file>
     </welcome-file-list>
     <listener>
         <listener-class>com.exam.listener.OneListener</listener-class>
     </listener>
+
+    <filter>
+        <filter-name>LoginFilter</filter-name>
+        <filter-class>com.exam.filter.LoginFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>LoginFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+
 </web-app>

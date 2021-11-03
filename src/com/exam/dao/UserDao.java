@@ -89,7 +89,7 @@ return list;
         }
         return result;
     }
-
+//登录验证
     public int login(String userName,String password){
         int i =0;
         ResultSet rs=null;

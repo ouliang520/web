@@ -23,9 +23,10 @@ public class LoginServlet extends HttpServlet {
         String userName = request.getParameter("userName");
         String password = request.getParameter("password");
         i =dao.login(userName,password);
-        System.out.println(i);
+        HttpSession session =request.getSession();
         if (i == 1) {
             response.sendRedirect("index.html");
+            session.setAttribute("key","ture");
         } else {
             response.sendRedirect("login_error.html");
         }
