@@ -57,6 +57,14 @@
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/userlogin</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>QuestionFindServlet</servlet-name>
+        <servlet-class>com.exam.controller.QuestionFindServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>QuestionFindServlet</servlet-name>
+        <url-pattern>/questionfind</url-pattern>
+    </servlet-mapping>
 
 <!--    设置默认主页-->
     <welcome-file-list>
