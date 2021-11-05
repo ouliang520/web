@@ -65,6 +65,38 @@
         <servlet-name>QuestionFindServlet</servlet-name>
         <url-pattern>/questionfind</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>QuestionDeleteServlet</servlet-name>
+        <servlet-class>com.exam.controller.QuestionDeleteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>QuestionDeleteServlet</servlet-name>
+        <url-pattern>/questiondelete</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>QuestionRandServlet</servlet-name>
+        <servlet-class>com.exam.controller.QuestionRandServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>QuestionRandServlet</servlet-name>
+        <url-pattern>/questionrand</url-pattern>
+    </servlet-mapping>
+<servlet>
+    <servlet-name>ExamOverServlet</servlet-name>
+    <servlet-class>com.exam.controller.ExamOverServlet</servlet-class>
+</servlet>
+    <servlet>
+        <servlet-name>ExamFindServlet</servlet-name>
+        <servlet-class>com.exam.controller.ExamFindServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ExamFindServlet</servlet-name>
+        <url-pattern>/examfind</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ExamOverServlet</servlet-name>
+        <url-pattern>/over</url-pattern>
+    </servlet-mapping>
 
 <!--    设置默认主页-->
     <welcome-file-list>

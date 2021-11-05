@@ -26,7 +26,7 @@ public class LoginServlet extends HttpServlet {
         HttpSession session =request.getSession();
         if (i == 1) {
             response.sendRedirect("index.html");
-            session.setAttribute("key","ture");
+            session.setAttribute("key",userName);
         } else {
             response.sendRedirect("login_error.html");
         }
